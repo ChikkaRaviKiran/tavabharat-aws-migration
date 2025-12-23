@@ -1,0 +1,19 @@
+[Unit]
+Description=TavaBharat API 2
+After=network.target mssql-server.service
+
+[Service]
+Type=notify
+WorkingDirectory=/var/www/api2
+ExecStart=/usr/bin/dotnet /var/www/api2/API2.dll
+Restart=always
+RestartSec=10
+KillSignal=SIGINT
+SyslogIdentifier=api2
+User=ubuntu
+Environment=ASPNETCORE_ENVIRONMENT=Production
+Environment=ASPNETCORE_URLS=http://localhost:5001
+EnvironmentFile=/var/www/api2/.env
+
+[Install]
+WantedBy=multi-user.target

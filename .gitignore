@@ -1,0 +1,34 @@
+# Environment files with sensitive data
+configs/.env
+*.env
+!.env.example
+
+# Database backups
+database/backups/
+*.bacpac
+*.bak
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Application builds (if testing locally)
+dist/
+build/
+node_modules/
+
+# System files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Uploaded deployment files
+uploads/
+*.zip

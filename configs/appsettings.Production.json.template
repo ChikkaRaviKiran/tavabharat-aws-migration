@@ -1,0 +1,21 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Database=TavaBharatDB_Prod;User Id=api_user;Password=PASSWORD_HERE;TrustServerCertificate=True;Max Pool Size=100;Connection Timeout=30;"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning",
+      "Microsoft.EntityFrameworkCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "Kestrel": {
+    "Limits": {
+      "MaxConcurrentConnections": 100,
+      "MaxRequestBodySize": 52428800,
+      "KeepAliveTimeout": "00:02:00",
+      "RequestHeadersTimeout": "00:00:30"
+    }
+  }
+}
